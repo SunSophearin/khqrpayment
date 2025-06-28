@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/cafe_shop
+    username: cafe_shop
+    password: cafe_shop
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+bakong:
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiODZlZjIyZGM2MzNiNDI3MiJ9LCJpYXQiOjE3NDkxMDY4NzIsImV4cCI6MTc1Njg4Mjg3Mn0.942lXWHFPCRzDf7TM_GqzFAEuEfUxwYDJQDzrAUeX44
+  account:
+    id: sophearin_sun@aclb
+merchant:
+  name: Sophearin Sun
+  city: PHNOMPENH
+  mobile: 855964962121
