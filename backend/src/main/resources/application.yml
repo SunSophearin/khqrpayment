@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/cafe_shop
-    username: cafe_shop
-    password: cafe_shop
+    url: jdbc:postgresql://localhost:5432/db_url
+    username: db_username
+    password: db_password
   jpa:
     hibernate:
       ddl-auto: update
@@ -10,10 +10,10 @@ spring:
       hibernate:
       dialect: org.hibernate.dialect.PostgreSQLDialect
 bakong:
-  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiODZlZjIyZGM2MzNiNDI3MiJ9LCJpYXQiOjE3NDkxMDY4NzIsImV4cCI6MTc1Njg4Mjg3Mn0.942lXWHFPCRzDf7TM_GqzFAEuEfUxwYDJQDzrAUeX44
+  token: insert_token_bakong
   account:
-    id: sophearin_sun@aclb
+    id: insert_id
 merchant:
-  name: Sophearin Sun
+  name: insert_your_name
   city: PHNOMPENH
-  mobile: 855964962121
+  mobile: insert_your_number
