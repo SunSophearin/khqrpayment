@@ -19,7 +19,6 @@ This system connects banks (like ABA, ACLEDA, Wing, etc.) via QR code, tracks th
 
 💳 Seamless User Flow — from QR generation to payment confirmation.
 
-🔐 Optional Security — via Spring Security and token protection.
 
 🧪 Workflow
 
