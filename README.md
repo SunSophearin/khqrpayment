@@ -1,69 +1,70 @@
-🇰🇭 KHQR Payment — Real-Time Cambodian QR Payment System
 
+# 🇰🇭 KHQR Payment
 A modern KHQR (Cambodia QR) payment solution with real-time updates, seamless integration, and full-stack architecture using Spring Boot and Nuxt 3.
 
-
-🚀 Overview
-
+# 🚀 Overview
 KHQR Payment is a full-stack project designed to simplify digital payments in Cambodia using the KHQR standard — with real-time notifications and a modern tech stack.
 
 This system connects banks (like ABA, ACLEDA, Wing, etc.) via QR code, tracks the status in real-time, and gives instant feedback to users.
 
-🧩 Key Features
+## 🧩 Key Features
 
-🏦 KHQR Payment Integration — based on the Cambodian banking QR standard.
-
-📡 Real-Time Notifications — via WebSocket (STOMP) for instant updates.
-
-🔗 Full-Stack Architecture — built with Spring Boot (Java) & Nuxt 3 (Vue).
-
-💳 Seamless User Flow — from QR generation to payment confirmation.
+- 🏦 KHQR Payment Integration — based on the Cambodian banking QR standard.
+- 📡 Real-Time Notifications — via WebSocket (STOMP) for instant updates.
+- 🔗 Full-Stack Architecture — built with Spring Boot (Java) & Nuxt 3 (Vue).
+- 💳 Seamless User Flow — from QR generation to payment confirmation.
 
 
-🧪 Workflow
+## Tech Stack
 
-1. User initiates payment via Nuxt frontend.
+**Client:** Nuxtjs, TailwindCSS
 
-2. Backend generates a KHQR QR code and returns it.
+**Server:** Spring boot
 
-3. Frontend displays QR to the user.
 
-4. User scans QR using a banking app (ABA, ACLEDA, Wing, etc.).
+## Installation
 
-5. Backend detects payment and sends real-time update via WebSocket.
+Install For FrontEnd
 
-6. Frontend updates UI instantly to reflect payment success.
+```bash
+  bun create nuxt <project-name>
+  cd <project-name>
+  bun i @stomp/stompjs
+  bun i sockjs-client
+```
+Install For BackEnd
 
-📦 Tech Stack
+```bash
+   You can access Spring Initializr at https://start.spring.io
+```
+Add dependencies KHQR
 
-🔙 Backend (Spring Boot)
+```bash
+ <dependency>
+    <groupId>kh.org.nbc.bakong_khqr</groupId>
+    <artifactId>sdk-java</artifactId>
+    <version>1.0.0.9</version>
+ </dependency>
+```
+Add dependencies Websocket
 
-· spring-boot-starter-websocket
+```bash
+ <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-websocket</artifactId>
+ </dependency>
+```
+## Application Flow
 
-· spring-boot-starter-security (optional)
+1.User Click payment
+![Screenshot (36)](https://github.com/user-attachments/assets/c47dac4c-8167-4cce-9968-c7a4a46045b8)
 
-· KHQR logic and payment detection (https://bakong.nbc.gov.kh/en/download/KHQR/integration/KHQR%20SDK%20Document.pdf)
 
-· Real-time communication via STOMP/WebSocket
+2.Payment Seccess
+![Screenshot (34)](https://github.com/user-attachments/assets/35d9f0fa-c520-4993-a260-afee705b8541)
 
-🔜 Frontend (Nuxt.js 3)
 
-· @stomp/stompjs
+## 🔗 Links
 
-· sockjs-client
-
-· WebSocket connection for real-time payment updates
-
-· QR code generation and display
-
-⚡ Real-Time
-
-· WebSocket + STOMP protocol for bi-directional communication
-
-🖼️ QR Code Generator
-
-· Use any standard QR library or a custom QR microservice
-
-📸 UI Preview (optional)
-
-![Screenshot (34)](https://github.com/user-attachments/assets/22709d09-0c49-40c4-a151-6e67880ccabb)
+- Nuxt 3 Documentation: https://nuxt.com/
+- KHQR Documentation: https://www.npmjs.com/package/ts-khqr
